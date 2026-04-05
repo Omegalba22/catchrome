@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>camel.chrome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100dvh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .app-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+        }
+        .app {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+        }
+        .app img {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            transition: transform 0.2s;
+        }
+        .app:hover img {
+            transform: scale(1.1);
+        }
+        .app span {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <a href="commingsoon.html" class="app">
+            <img src="shop.webp" alt="App 1">
+            <span>shop</span>
+        </a>   
+        <a href="commingsoon.html" class="app">
+            <img src="puzzle.webp" alt="App 1">
+            <span>évenements</span>
+        </a>    
+        <a href="commingsoon.html" class="app">
+            <img src="calendrier.png" alt="App 1">
+            <span>calendrier</span>
+        </a> 
+        <a href="https://www.instagram.com/camel.chrome/" class="app" target="_blank">
+            <img src="instagram.jpeg" alt="App 1">
+            <span>Instagram</span>
+        </a>   
+        
+        <a href="https://www.youtube.com/@camel.chrome" class="app" target="_blank">
+            <img src="youtube.png" alt="App 1">
+            <span>Youtube</span>
+        </a>    
+        
+        <a href="https://www.tiktok.com/@camel.chrome" class="app" target="_blank">
+            <img src="tictoc.png" alt="App 1">
+            <span>Tic Toc</span>
+        </a>  
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camel Chrome - Contact</title>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #121212;
+      color: #f0f0f0;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 260px;
+    }
+
+        .contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Ajouté pour un meilleur espacement entre icône et texte */
+    text-align: center; /* Centrage du texte */
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .instagram {
+      background: linear-gradient(45deg, #5c6bc0, #26c6da);
+    }
+
+    .youtube {
+        background: linear-gradient(45deg, #c13584, #e1306c, #fd1d1d);
+    }
+
+    .tiktok {
+      background: linear-gradient(45deg, #00f2ea, #8e2de2);
+    }
+
+    .email {
+      background-color: #2ecc71;
+    }
+
+    .alt-email {
+      background: linear-gradient(45deg, #5c6bc0, #26c6da);
+    }
+
+    .contact-button i,
+    .contact-button ion-icon {
+    font-size: 20px;
+    margin: 0; /* Supprime les marges parasites */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contacts</h1>
+
+  <div class="contact-container">
+    <a href="https://www.instagram.com/timothee.baudry" target="_blank" class="contact-button instagram">
+      <ion-icon name="logo-instagram"></ion-icon> Timothée
+    </a>
+
+    <a href="https://www.instagram.com/theodore_tb" target="_blank" class="contact-button youtube">
+        <ion-icon name="logo-instagram"></ion-icon> Théodore
+    </a>
+
+    <a href="https://www.instagram.com/keli_lnclt" target="_blank" class="contact-button tiktok">
+        <ion-icon name="logo-instagram"></ion-icon> Kélian
+    </a>
+
+    <a href="https://www.instagram.com/chr_cameron" target="_blank" class="contact-button youtube">
+        <ion-icon name="logo-instagram"></ion-icon> Camerone
+    </a>
+
+    <a href="https://www.instagram.com/gaetan.smr" target="_blank" class="contact-button tiktok">
+        <ion-icon name="logo-instagram"></ion-icon> Gaetan
+    </a>
+
+    <a href="mailto:camelcrome@gmail.com" class="contact-button alt-email">
+      <i class="fas fa-envelope"></i> camelcrome@gmail.com
+    </a>
+  </div>
+
+</body>
+</html>

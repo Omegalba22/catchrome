@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camel Chrome - Contact</title>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 260px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .instagram {
+      background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    }
+
+    .youtube {
+      background-color: #ff0000;
+    }
+
+    .tiktok {
+      background-color: #010101;
+    }
+
+    .email {
+      background-color: #00c853;
+    }
+
+    .contact-button i,
+    .contact-button ion-icon {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contacts</h1>
+
+  <div class="contact-container">
+    <a href="https://www.instagram.com/camel.chrome" target="_blank" class="contact-button instagram">
+      <ion-icon name="logo-instagram"></ion-icon> Instagram
+    </a>
+
+    <a href="https://www.youtube.com/@camel.chrome" target="_blank" class="contact-button youtube">
+      <ion-icon name="logo-youtube"></ion-icon> YouTube
+    </a>
+
+    <a href="https://www.tiktok.com/@camel.chrome" target="_blank" class="contact-button tiktok">
+      <ion-icon name="logo-tiktok"></ion-icon> TikTok
+    </a>
+
+    <a href="plusdecontact.html" class="contact-button email">
+      <i class="fas fa-envelope"></i> Plus de contact
+    </a>
+  </div>
+
+</body>
+</html>

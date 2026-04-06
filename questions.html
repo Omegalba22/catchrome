@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>QCM Catchrome </title>
+    <link rel="icon" type="image/jpeg" href="logo001.jpeg">
+    <style>
+        body { font-family: Arial; background-color: #ffffff; color: rgb(0, 0, 0); text-align: center; }
+        .question { margin: 30px; padding: 20px; border: 1px solid #d7652b; border-radius: 10px; }
+        button { cursor: pointer; padding: 5px 15px; margin: 5px; }
+    </style>
+</head>
+
+<body>
+
+    <h1>Catchrome Quiz</h1>
+
+    <div class="question">
+        <p>1. Quelle sport fait mieux le chat ?</p>
+        <select id="choix1">
+            <option value=""> Choix </option>
+            <option value="nage">nager</option>
+            <option value="coure">courir</option>
+            <option value="velo">faire du vélo</option>
+        </select>
+        <button onclick="valider1()">Valider</button>
+    </div>
+
+    <div class="question">
+        <p>2. Quelle est la taille du plus grand chat au monde (en cm) ?</p>
+        <input type="text" id="choix2" placeholder="nb avec virgule">
+        <button onclick="valider2()">Valider</button>
+    </div>
+
+    <div class="question">
+        <p>3. Le chocolat est-il mauvais pour le chat ?</p>
+        <button onclick="valider3('vrai')">Vrai</button>
+        <button onclick="valider3('faux')">Faux</button>
+    </div>
+
+    <div class="question">
+        <p>3. Le chat aime l'eau? </p>
+        <button onclick="valider4('vrai')">Vrai</button>
+        <button onclick="valider4('faux')">Faux</button>
+    </div>
+
+    <hr>
+    <h2>Score : <span id="score">0</span> / 4</h2>
+
+    <script src="questions.js"></script>
+</body>
+</html>

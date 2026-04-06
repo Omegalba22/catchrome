@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Image responsive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding-top: 100px;  /* espace pour le titre fixe */
+            padding-bottom: 100px; /* espace pour le bouton fixe */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .boxtitre {
+            position: fixed;
+            top: 20px;
+            width: 100%;
+            z-index: 99;
+            text-align: center;
+        }
+
+        .boxtitre h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #222;
+        }
+
+        .boximage {
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .boximage img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+            max-height: calc(100vh - 220px); /* espace réservé aux éléments fixes */
+            object-fit: contain;
+        }
+
+        .boxlien {
+            position: fixed;
+            bottom: 20px;
+            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            height: 60px;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 15px;
+            z-index: 99;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .boxlien a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .boxlien a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-height: 500px) {
+            .boximage img {
+                max-height: 200px;
+            }
+
+            .boxlien {
+                height: 50px;
+            }
+
+            .boxlien a {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="boxtitre">
+        <h1>NEW</h1>
+    </div>
+
+    <div class="boximage">
+        <img src="t-shirt002.jpeg" alt="T-shirt Camel Chrome">
+    </div>
+
+    <div class="boxlien">
+        <a href="commingsoon.html" target="_blank">🛒 Buy now</a>
+    </div>
+</body>
+</html>

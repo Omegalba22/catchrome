@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { background-color: #fffdfd; color: rgb(0, 0, 0); font-family: Arial; }
+        
+        div { margin-bottom: 10px; }
+        label { display: inline-block; width: 40px; }
+
+        .carre {
+            border: 2px solid #d7652b;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        
+        input[type="button"] { cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="carre">
+        <h3>Vérifier si le triangle est rectangle</h3>
+        <div><label>AB</label><input id="AB"></div>
+        <div><label>AC</label><input id="AC"></div>
+        <div><label>BC</label><input id="BC"></div>
+        <input type="button" value="Calculer" onclick="pythagore()">
+        <p id="reponse"></p>
+    </div>
+
+    <div class="carre">
+        <h3>Calculer l'hypoténuse</h3>
+        <div><label>AB</label><input id="AB2"></div>
+        <div><label>AC</label><input id="AC2"></div>
+        <input type="button" value="Calculer l'hypoténuse" onclick="hypothenuse()">
+        <p id="reponse2"></p>
+    </div>
+
+    <script src="pythagore.js"></script>
+</body>
+</html>
+

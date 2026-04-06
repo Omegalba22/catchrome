@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur de 'e'</title>
+    <style>
+        body { background-color: #fffdfd; color: rgb(0, 0, 0); font-family: Arial; text-align: center; }
+        
+        div { margin-bottom: 10px; }
+
+        .carre {
+            border: 2px solid #d7652b;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            display: inline-block; 
+            min-width: 300px;
+        }
+        
+        button { cursor: pointer; padding: 5px 15px; }
+        input { padding: 5px; border-radius: 5px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+
+    <div class="carre">
+        <h3>Compteur de 'e'</h3>
+        <input type="text" id="wordInput" placeholder="Entrez un mot">
+        <button onclick="countE()">Compter les 'e'</button>
+        <p id="result"></p> 
+    </div>
+
+    <script>
+        function countE() {
+            const word = document.getElementById('wordInput').value;
+            const count = (word.match(/e/gi) || []).length; 
+            document.getElementById('result').textContent = `Le mot "${word}" contient ${count} 'e'.`;
+        }
+    </script>
+</body>
+</html>

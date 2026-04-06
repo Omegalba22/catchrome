@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catchrome</title>
+    <link rel="icon" type="image/jpeg" href="logo001.jpeg">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100dvh;
+            overflow: hidden;
+            background-color: #121212; /* Fond sombre */
+            color: #f0f0f0; /* Texte clair */
+        }
+        /* Header fixe */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #1c1c1c; /* Fond plus sombre */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        /* Barre de navigation en bas */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #1c1c1c; /* Fond sombre */
+            border-top: 1px solid #444; /* Bordure plus claire */
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        .bottom-nav a {
+            text-decoration: none;
+            color: #f0f0f0; /* Texte clair */
+            font-size: 23px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bold;
+        }
+        .bottom-nav a i {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        .bottom-nav a:hover {
+            color: #ecf321; /* Couleur d'accentuation au survol */
+        }
+        /* Conteneur scrollable */
+        .iframe-container {
+            width: 100%;
+            height: calc(100vh - 140px);
+            overflow-y: auto;
+            scroll-snap-type: y mandatory;
+        }
+        iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+            scroll-snap-align: start;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <a href="main.html"><strong>cat chrome</strong></a>
+</header>
+
+<!-- Conteneur scrollable des iframes -->
+<div class="iframe-container">
+    <iframe src="contactiframe.html"></iframe>
+    <iframe src="info.html"></iframe>
+
+<!-- Barre de navigation en bas -->
+<div class="bottom-nav">
+    <a href="main.html"><i class="fas fa-home"></i><ion-icon name="home-outline"></ion-icon></a>
+    <a href="search.html"><i class="fas fa-search"></i><ion-icon name="apps-outline"></ion-icon></a>
+    <a href="conceptes.html"><i class="fas fa-plus-square"></i><ion-icon name="bulb-outline"></ion-icon></a>
+    <a href="contact.html"><i class="fas fa-user"></i><ion-icon name="person-circle-outline"></ion-icon></a>
+</div>
+
+</body>
+</html>

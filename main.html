@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catchrome</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpeg" href="logo001.jpeg">
+
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100dvh;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #1c1c1c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #1c1c1c;
+            border-top: 1px solid #444;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .bottom-nav a {
+            text-decoration: none;
+            color: #f0f0f0;
+            font-size: 23px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .bottom-nav a i {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+
+        .bottom-nav a:hover {
+            color: #ecf321;
+        }
+
+        .iframe-container {
+            width: 100%;
+            flex: 1;
+            overflow-y: auto;
+            scroll-snap-type: y mandatory;
+        }
+
+        .iframe-wrapper {
+            padding-top: 60px;    /* hauteur du header */
+            padding-bottom: 50px; /* hauteur du bas de page */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            scroll-snap-align: start;
+            box-sizing: border-box;
+
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 390px;
+            height: 100%;
+            border: none;
+            background-color: white;
+            border-radius: 20px;
+            border: 3px solid,#004272; /* Bordure verte */
+
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="main.html"><strong>cat chrome</strong></a>
+</header>
+
+<div class="iframe-container" id="iframe-container">
+    <p>Chargement...</p>
+</div>
+
+<div class="bottom-nav">
+    <a href="main.html"><i class="fas fa-home"></i><ion-icon name="home-outline"></ion-icon></a>
+    <a href="search.html"><i class="fas fa-search"></i><ion-icon name="apps-outline"></ion-icon></a>
+    <a href="conceptes.html"><i class="fas fa-plus-square"></i><ion-icon name="bulb-outline"></ion-icon></a>
+    <a href="contact.html"><i class="fas fa-user"></i><ion-icon name="person-circle-outline"></ion-icon></a>
+</div>
+
+<script>
+    async function loadIframes() {
+        const response = await fetch('data.csv');
+        const data = await response.text();
+        const rows = data.split('\n').slice(1); // Supprime l'en-tête
+        let links = [];
+
+        for (let row of rows) {
+            let [importance, lien] = row.split(',');
+            if (importance && lien) {
+                links.push({ importance: parseInt(importance), lien: lien.trim() });
+            }
+        }
+
+        links.sort((a, b) => a.importance - b.importance);
+
+        const container = document.getElementById('iframe-container');
+        container.innerHTML = ''; // Efface le contenu initial
+
+        links.forEach(item => {
+            let wrapper = document.createElement('div');
+            wrapper.className = 'iframe-wrapper';
+
+            let iframe = document.createElement('iframe');
+            iframe.src = item.lien;
+
+            wrapper.appendChild(iframe);
+            container.appendChild(wrapper);
+        });
+    }
+
+    loadIframes().catch(error => console.error("Erreur de chargement des iframes :", error));
+</script>
+
+</body>
+</html>

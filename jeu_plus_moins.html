@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Jeu</title>
+    <style>
+        body { 
+            background-color: #fffdfd; 
+            color: rgb(0, 0, 0); 
+            font-family: Arial; 
+            text-align: center; 
+        }
+
+        .carre {
+            border: 2px solid #d7652b;
+            padding: 20px;
+            margin: 20px auto; 
+            border-radius: 10px;
+            display: inline-block;
+            min-width: 300px;
+        }
+
+        #reponse { 
+            font-weight: bold; 
+            color: #d7652b; 
+            min-height: 1.2em;
+        }
+
+        input[type="text"] { padding: 5px; border-radius: 5px; border: 1px solid #ccc; }
+        input[type="button"] { cursor: pointer; padding: 5px 15px; }
+    </style>
+</head>
+<body>
+
+    <h1>Espace Jeux</h1>
+
+    <div class="carre">
+        <p>Devinez mon nombre</p>
+
+        <p>
+            <input id="plusoumoins" type="text" placeholder="Entrez un nombre" />
+        </p>
+
+        <p>
+            <input value="Proposer" onclick="plus()" type="button" />
+        </p>
+
+        <p id="reponse"></p>
+    </div>
+
+    <script src="jeu_plus_moins.js"></script>
+
+</body>
+</html>
